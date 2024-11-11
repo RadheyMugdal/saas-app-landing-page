@@ -1,3 +1,27 @@
+import pyramidImage from "@/assets/pyramid.png"
+import productImage from "@/assets/product-image.png"
+import tubeImage from "@/assets/tube.png"
+import Image from "next/image";
 export const ProductShowcase = () => {
-  return null;
+  return <section className=" overflow-x-clip bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 ">
+    <div  className=" container">
+      <div className=" max-w-[540px] mx-auto">
+
+      <div className=" flex justify-center">
+      <div className=" tag">
+        Boost your productivity
+      </div>
+      </div>
+      
+      <h2 className=" text-center text-3xl md:text-[54px] md:leading-[64px] font-bold tracking-tighter  bg-gradient-to-b from-black  to-[#001E80] text-transparent bg-clip-text mt-5  ">A more effective way to track progresss</h2>
+      <p className="text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E] mt-5">Errortlessly turn your ideas into a fully function,responsive Saas website in just minutes with this template.</p>
+      <div className=" relative
+      ">
+      <Image src={productImage} alt="product image" className=" mt-10" />
+      <Image src={pyramidImage} alt="pyramid image" height={262} width={262} className=" hidden md:block absolute  -right-36 -top-32" />
+      <Image src={tubeImage} alt="tube image" height={248}  className=" hidden md:block absolute  -bottom-24 -left-36" />
+      </div>
+      </div>
+    </div>
+  </section>;
 };
